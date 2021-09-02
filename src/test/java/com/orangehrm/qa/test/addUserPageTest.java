@@ -65,10 +65,10 @@ public void addUserDetailsTest(String userrole, String empname, String uname, St
 	boolean flag= systemuserpage.isUserAvailableByUsername(uname);
 	Assert.assertTrue(flag);	
 }
-/*
+
 @Test(dataProvider="verifypasswordlength",dataProviderClass = com.orangehrm.qa.utils.DataProviderDetails.class)
 public void passwordlengthErrorMessageTest(String passwd) {
 	boolean flag = adduserpage.passwordlengthErrorMessage(passwd);	
 	Assert.assertTrue(flag,"'Should have at least 8 characters' error message is not displayed for password field");
-}*/
+}
 }
