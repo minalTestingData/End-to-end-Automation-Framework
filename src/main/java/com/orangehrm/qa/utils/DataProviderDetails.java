@@ -3,6 +3,13 @@ package com.orangehrm.qa.utils;
 import org.testng.annotations.DataProvider;
 
 public class DataProviderDetails {
+	
+	@DataProvider(name="LoginCredentials")
+	public Object[][] LoginCredentials() {
+		Object[][] logindata = testUtils.getTestData("C:\\Users\\minal\\git\\repository2\\OrangeHRMtest\\TestData\\OrangeHRMTestData.xlsx","LoginCredentials");
+				//Object[][] data1 = {{"minal1234","minal1234"}};
+		       return logindata;	
+	}
 
 	@DataProvider(name = "userMgmtSearch")
 	public Object[][] userMgmtSearch() throws Exception {

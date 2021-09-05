@@ -4,10 +4,16 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -25,6 +31,7 @@ public static WebDriver driver;
 public static Properties prop;
 public  static EventFiringWebDriver e_driver;
 public static WebEventListener eventListener;
+public static Logger logger;
 
 public LoginPage loginpage;
 
@@ -47,6 +54,8 @@ public TestBase() {
 @BeforeMethod
 public void setup() {
 	initialization();
+	 logger = Logger.getLogger("OrangeHRMtest");
+	PropertyConfigurator.configure("log4j.properties");
 	loginpage = new LoginPage();
 }
 
@@ -86,4 +95,12 @@ public static void initialization() {
 	driver.get(prop.getProperty("url"));
 }
 
+public void captureScreen(WebDriver driver, String screenshotName) throws IOException {
+	String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+	TakesScreenshot ts = (TakesScreenshot) driver;
+	File source = ts.getScreenshotAs(OutputType.FILE);
+	File target = new File(System.getProperty("user.dir") + "/Screenshots/" + screenshotName+dateName + ".png");	
+	FileUtils.copyFile(source, target);
+	System.out.println("Screenshot taken");
+}
 }
