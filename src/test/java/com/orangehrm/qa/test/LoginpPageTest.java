@@ -17,7 +17,7 @@ public class LoginpPageTest extends TestBase{
 	HomePage homepage;
 
 	public LoginpPageTest() {
-		super();
+		super(); // calling constructor of testBase class
 	}
 
 	@Test(priority=1)
@@ -45,4 +45,6 @@ public class LoginpPageTest extends TestBase{
 		logger.info("Login functinallity failed");
 	}
 	}
+	
+	
 }

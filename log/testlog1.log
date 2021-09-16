@@ -71,3 +71,10 @@ java.lang.IllegalStateException: cannot be started once stopped
 2021-09-04 17:03:08,946 [main] INFO OrangeHRMtest - Login functinallity verified
 2021-09-04 21:49:59,114 [main] INFO OrangeHRMtest - Login pannel get verified
 2021-09-04 21:50:59,503 [main] INFO OrangeHRMtest - Login pannel get verified
+2021-09-04 22:07:26,498 [main] INFO OrangeHRMtest - Login pannel get verified
+2021-09-04 22:16:02,973 [main] INFO OrangeHRMtest - Login pannel get verified
+2021-09-04 22:16:10,385 [main] INFO OrangeHRMtest - Login functinallity verified
+2021-09-16 09:50:48,584 [main] INFO OrangeHRMtest - Login pannel get verified
+2021-09-16 09:50:56,343 [main] INFO OrangeHRMtest - Login functinallity verified
+2021-09-16 09:54:36,711 [main] INFO OrangeHRMtest - Login pannel get verified
+2021-09-16 09:54:45,185 [main] INFO OrangeHRMtest - Login functinallity verified

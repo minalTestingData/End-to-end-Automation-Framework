@@ -33,5 +33,10 @@ public class AttendenceRecordPage extends TestBase{
 		driver.findElement(By.xpath("//div[@id=\"ui-datepicker-div\"]//table//tbody//tr//td//a[text()='"+check_date+"']")).click();
 		view.click();
 	}
+	
+	public boolean logodisplay() {
+		//return LoginPage.image.isDisplayed();
+		return addUserPage.image.isDisplayed();
+	}
 
 }

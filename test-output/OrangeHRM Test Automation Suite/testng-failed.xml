@@ -8,8 +8,9 @@
     <classes>
       <class name="com.orangehrm.qa.test.LoginpPageTest">
         <methods>
-          <include name="Verifylogin" invocation-numbers="0 1"/>
+          <include name="Verifylogin"/>
           <include name="teardown"/>
+          <include name="Verifyloginpannel"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.orangehrm.qa.test.LoginpPageTest -->

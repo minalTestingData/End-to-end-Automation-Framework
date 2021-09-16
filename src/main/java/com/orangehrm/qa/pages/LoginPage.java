@@ -1,5 +1,6 @@
 package com.orangehrm.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +30,8 @@ public class LoginPage extends TestBase{
 	@FindBy (xpath="//a[text()='Logout']")
 	WebElement logout;
 	
+	@FindBy(xpath="//div[@id='branding']//span[@id='notification']//parent::div//preceding-sibling::a//img")
+	public static WebElement image;
 	
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
@@ -50,4 +53,6 @@ public class LoginPage extends TestBase{
 		Actions actions = new Actions(driver);
 		actions.moveToElement(welcome).click().moveToElement(logout).click().build().perform();
 	}
+	
+	
 }

@@ -44,6 +44,9 @@ public class addUserPage extends TestBase  {
 	@FindBy(xpath="//input[@id='systemUser_password']//parent::li//child::span[contains(text(),'Should have at least 8 characters')]")
 	WebElement passwdlenghtherror;
 	
+	@FindBy(xpath="//div[@id='branding']//span[@id='notification']//parent::div//preceding-sibling::a//img")
+	public static WebElement image;
+	
 	
 	public addUserPage() {
 	 PageFactory.initElements(driver, this);	
@@ -117,5 +120,9 @@ public class addUserPage extends TestBase  {
 			return true;
 			}
 		return false;
+	}
+	
+	public boolean logodisplay() {
+		return driver.findElement(By.xpath(prop.getProperty("xpath"))).isDisplayed();
 	}
 }
